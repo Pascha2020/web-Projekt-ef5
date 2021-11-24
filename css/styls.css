@@ -1,24 +1,49 @@
 body{
     background:rgb(224, 238, 237);
 }
-.wraper{
+.wrapper{
     width: 100%;
     max-width: 1024px;
     margin: auto;
     margin-top: 40px;
     border: 2px solid darkolivegreen;
     padding:20px;
-    display:flex
+    display:flex;
+    flex-direction: column;
 }
-.card{
-    border: 2px solid darkturquoise;
-    padding: 20px;
+.baum{
+    /*border: 2px solid darkturquoise;
+    /*padding: 20px;*/
     margin: 20px;
     flex-grow: 1;
-    flex-basis: 0
+    flex-basis:0;
+    position: relative; 
+
+}
+.baum .point{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    background-color: rgb(47, 205, 207);
+    top: 90px;
+    left: 20px;
+
 }
 .background-image{
     height: 150px;
     background-size: cover;
     background-position: 50% 50%;
+    background-repeat: no-repeat;
 }
+@media screen and (min-width: 600px) {
+    .wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }    
+    .baum{
+        flex-basis: 300px;
+    }
+    
+    }
+  }
